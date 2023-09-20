@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+
+
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            margin: 0 auto;
+            max-width: 50rem;
+            border: 1px solid black;
+            box-shadow: 10px 20px #888888;
+        }
+        form div{
+            font-family: 'Teko', sans-serif;
+            display: flex;
+            justify-items: stretch;
+            align-items: stretch;
+            /* border: 1px solid black; */
+            padding: 0px;
+            border-bottom: 3px solid black;
+
+        }
+        form div h2{
+            font-size: 3rem;
+            padding: 1rem;
+            width: 20rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form div h3{
+            font-size: 1rem;
+            padding: 1rem;
+            font-weight: 200;
+            width: 10rem;
+            /* border: 1px solid black; */
+            margin: 0px;
+            display: flex;
+            align-items: center;
+            border-left: 3px solid black;
+            
+        }
+
+        section{
+            margin: 1rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        section label{
+            font-size: 1.5rem;
+        }
+        section input{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: #cecdcb;
+            color: rgb(19, 18, 18);
+            border: 0px;
+            padding: 0.3rem 1rem;
+            border-radius: 2rem;
+            width: 100%;
+            height: 2rem;
+            font-size: 1.2rem;
+            
+        }
+        textarea{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: #cecdcb;
+            color: #131212;
+            border: 0px;
+            border-radius: 0.5rem;
+            width: 100%;
+            font-size: 1.2rem;
+            display: block;
+            padding: 1rem 0.2rem;
+            height: 10rem;
+        }
+        #reviewSection{
+            display: block
+        }
+        #reviewSection section input{
+            width: 1rem;
+        }
+        #reviewSection section{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            border: 1px solid black;
+            border-radius: 1rem;
+            padding: 1rem;
+        }
+        img{
+            width: 4rem;
+            height: 4rem;
+        }
+        .reviewdiv{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 0px;
+        }
+        #submitBtn{
+            border: 0px;
+            background-color: #cecdcb;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1rem;
+            padding: 1rem;
+        }
+        #submitBtn:hover{
+            background-color: #bbb9b6;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <form>
+        <div>
+            <h2>
+                SURVEY FORM
+            </h2>
+            <h3>
+                This is not an actual form i have made this for learning, moreover this form don't post anything.
+            </h3>
+        </div>
+        <section>
+        <label>Name:</label>
+        <input width="100%" type="text">
+        </section>
+        <section>
+            <section style="margin: 0rem;">
+            <label>Age: </label><input style="width: 5rem;" type="number" min="0" max="80">
+            </section>
+            <section id="gdrSection">
+            <label>Gender:</label>
+            <input style="margin: -0.5rem; font-size: 1.2rem;" type="radio" name="gender" value="Male"><label style="font-size: 1.2rem;">Male</label>
+            <input style="margin: -0.5rem;" type="radio" name="gender" value="Female"><label style="font-size: 1.2rem;">Female</label>
+            </section>
+        </section>
+        <section>
+            <label>Email:</label>
+            <input width="100%" type="email" placeholder="example: abcd123@gmail.com">
+        </section>
+        <section style="display: flex; flex-direction: column; align-items: start;">
+            <label>Facing any problem:</label>
+            <textarea></textarea>
+        </section>
+        <section id="reviewSection">
+            <label>User Review:</label>
+            <section>
+            <div class="reviewdiv"><img src="https://cdn.icon-icons.com/icons2/2066/PNG/512/emoji_sad_icon_125297.png" alt=""><input type="radio" name="review" value="bad"></div>
+            <div class="reviewdiv"><img src="https://cdn.icon-icons.com/icons2/2066/PNG/512/emoji_neutral_icon_125298.png" alt=""><input type="radio" name="review" value="neutral"></div>
+            <div class="reviewdiv"><img src="https://cdn.icon-icons.com/icons2/2066/PNG/512/emoji_smile_icon_125296.png" alt=""><input type="radio" name="review" value="good"></div>
+            </section>
+        </section>
+
+        <input id='submitBtn' type="button" value="SUBMIT">
+    </form>
+</body>
+</html>
